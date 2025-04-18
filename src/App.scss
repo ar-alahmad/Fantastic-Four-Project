@@ -1,0 +1,79 @@
+@import "./variables.scss";
+@import "./pages/Home.scss";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.app-fixed-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  nav {
+    flex: 0 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #f7f0e4;
+    z-index: 1000;
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      gap: 40px;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo {
+        width: 100px;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--onyx);
+        font-weight: 500;
+       
+
+        &.active {
+          border-bottom: 2px solid var(--rosy-brown);
+        }
+
+        &:hover {
+          color: var(--rosy-brown);
+        }
+      }
+    }
+  }
+
+  footer {
+    flex: 0 0 auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: var(--light-blue);
+    z-index: 1000;
+  }
+
+  .scrollable-content {
+    flex: 1 1 auto;
+    margin-top: 80px; // the same as the HEADER << !!
+    margin-bottom: 50px; // the same as the FOOTER << !!
+    overflow-y: auto;
+  }
+}
