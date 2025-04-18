@@ -1,5 +1,3 @@
-// Footer.jsx
 export default function Footer() {
-    return <footer>Footer content here</footer>
-  }
-  
+  return <footer className="footer">Footer content here</footer>;
+}
